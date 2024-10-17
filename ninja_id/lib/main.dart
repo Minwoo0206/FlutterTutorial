@@ -13,10 +13,10 @@ class NinjaCard extends StatelessWidget {
       backgroundColor: Colors.grey[900],
       appBar: AppBar(
         title: Text(
-          'Ninja ID Card',
-          style: TextStyle(
-            color: Colors.white,
-          )
+            'Ninja ID Card',
+            style: TextStyle(
+              color: Colors.white,
+            )
         ),
         centerTitle: true,
         backgroundColor: Colors.grey[850],
@@ -46,13 +46,13 @@ class NinjaCard extends StatelessWidget {
             ),
             SizedBox(height: 10.0,),
             Text(
-                'Chun-Li',
-                style: TextStyle(
-                  color: Colors.amberAccent[200],
-                  letterSpacing: 2.0,
-                  fontSize: 28.0,
-                  fontWeight: FontWeight.bold,
-                ),
+              'Chun-Li',
+              style: TextStyle(
+                color: Colors.amberAccent[200],
+                letterSpacing: 2.0,
+                fontSize: 28.0,
+                fontWeight: FontWeight.bold,
+              ),
             ),
             SizedBox(height: 30.0,),
             Text(

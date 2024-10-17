@@ -12,15 +12,20 @@ class Home extends StatelessWidget {
   Widget build(BuildContext context) {
     return Scaffold(
       appBar: AppBar(
-        title: const Text('my first app'),
+        title: const Text(
+          'my first app',
+          style: TextStyle(
+            fontFamily: 'IndieFlower',
+          )
+        ),
         centerTitle: true,
         backgroundColor: Colors.red[600],
       ),
       body: Row(
         children: [
           Expanded(
-            flex: 3,
-            child: Image.asset('assets/space-1.jpeg')
+              flex: 3,
+              child: Image.asset('assets/space-1.jpeg')
           ),
           Expanded(
             flex: 3,
