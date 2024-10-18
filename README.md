@@ -6,4 +6,6 @@ Video Link: [Flutter Tutorial for Beginners #1 - Intro & Setup](https://www.yout
 ## Folder Description
 myapp: chap4 ~ chap14
 
-ninja_id: chap15 ~
+ninja_id: chap15 ~ chap16
+
+quotes: chap17 ~ chap21
