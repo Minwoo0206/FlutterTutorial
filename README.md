@@ -15,4 +15,6 @@ Video Link: [Flutter Tutorial for Beginners #1 - Intro & Setup](https://www.yout
 # Flutter Masterclass
 I enrolled in the flutter masterclass taught by Net Ninja for further study with just 10 bucks. 
 
-Site Link: [Flutter Masterclass](https://netninja.dev/p/flutter-masterclass)
+Site Link: [flutter masterclass course site](https://netninja.dev/p/flutter-masterclass)
+
+Data Link: [flutter masterclass git repo](https://github.com/iamshaunjp/flutter-masterclass)
