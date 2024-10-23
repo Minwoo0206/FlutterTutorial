@@ -11,3 +11,8 @@ Video Link: [Flutter Tutorial for Beginners #1 - Intro & Setup](https://www.yout
 `quotes`: chap17 ~ chap21
 
 `world_time`: chat22 ~ chap35
+
+# Flutter Masterclass
+I enrolled in the flutter masterclass taught by Net Ninja for further study with just 10 bucks. 
+
+Site Link: [Flutter Masterclass](https://netninja.dev/p/flutter-masterclass)
