@@ -3,6 +3,7 @@ import 'package:flutter_rpg/shared/styled_button.dart';
 import 'package:flutter_rpg/shared/styled_text.dart';
 
 import '../../models/character.dart';
+import '../create/create.dart';
 import 'character_card.dart';
 
 class Home extends StatefulWidget {
@@ -34,7 +35,11 @@ class _HomeState extends State<Home> {
           ),
 
           StyledButton(
-            onPressed: () {}, 
+            onPressed: () {
+              Navigator.push(context, MaterialPageRoute(
+                builder: (ctx) => const Create(),
+              ));
+            }, 
             child: const StyledHeading('Create New'),
           )
         ],),
