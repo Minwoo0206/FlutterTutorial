@@ -15,7 +15,8 @@ class CharacterStore extends ChangeNotifier {
 
   void addCharacter(Character character) {
     _characters.add(character);
+    notifyListeners();
   }
 
-  
+
 }
