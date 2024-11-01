@@ -1,3 +1,5 @@
+import 'package:cloud_firestore/cloud_firestore.dart';
+
 import 'skill.dart';
 import 'stats.dart';
 import 'vocation.dart';
@@ -45,7 +47,43 @@ class Character with Stats {
       'points': points,
     };
   }
+
+  // character from firestore
+  factory Character.fromFirestore(
+    DocumentSnapshot<Map<String, dynamic>> snapshot,
+    SnapshotOptions? options
+  ) {
+
+    // get data from snapshot
+    final data = snapshot.data()!;
+
+    // make character instance
+    Character character = Character(
+      name: data['name'], 
+      slogan: data['slogan'], 
+      id: snapshot.id,
+      vocation: Vocation.values.firstWhere((v) => v.toString() == data['vocation']),
+    );
+
+    // update skills
+    for (String id in data['skills']) {
+      Skill skill = allSkills.firstWhere((element) => element.id == id);
+      character.updateSkill(skill);
+    }
+
+    // set isFav
+    if (data['isFav'] == true) {
+      character.toggleIsFav();
+    }
+
+    // assign stats & points
+    character.setStats(points: data['points'], stats: data['stats']);
+
+    return character;
+
+  }
 }
+
 
 // dummy character data
 
