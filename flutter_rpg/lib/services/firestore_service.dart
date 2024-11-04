@@ -7,7 +7,7 @@ class FirestoreService {
     .collection('characters')
     .withConverter(
       fromFirestore: Character.fromFirestore, 
-      toFirestore: (Character c, _) => c.toFiresotre()
+      toFirestore: (Character c, _) => c.toFirestore()
     );
 
   // add a new character

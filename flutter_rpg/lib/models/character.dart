@@ -36,7 +36,7 @@ class Character with Stats {
   }
 
   // character to firestore (map)
-  Map<String, dynamic> toFiresotre() {
+  Map<String, dynamic> toFirestore() {
     return {
       'name': name,
       'slogan': slogan,
