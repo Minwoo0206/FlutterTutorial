@@ -1,4 +1,5 @@
 import 'package:flutter/material.dart';
+import 'package:flutter_rpg/screens/profile/heart.dart';
 import 'package:flutter_rpg/services/character_store.dart';
 import 'package:flutter_rpg/shared/styled_text.dart';
 import 'package:provider/provider.dart';
@@ -27,28 +28,41 @@ class Profile extends StatelessWidget {
         child: Column(
           crossAxisAlignment: CrossAxisAlignment.center,
           children: [
+
             // basic info - image, vocation, description
-            Container(
-              padding: const EdgeInsets.all(16),
-              color: AppColors.secondaryColor.withOpacity(0.3),
-              child: Row(
-                children: [
-                  Image.asset('assets/img/vocations/${character.vocation.image}',
-                    width: 140,
-                    height: 140,
-                  ),
-                  const SizedBox(width: 20),
-                  Expanded(
-                    child: Column(
-                      crossAxisAlignment: CrossAxisAlignment.start,
-                      children: [
-                        StyledHeading(character.vocation.title),
-                        StyledText(character.vocation.description),
-                      ],
-                    ),
+            Stack(
+              children: [
+                Container(
+                  padding: const EdgeInsets.all(16),
+                  color: AppColors.secondaryColor.withOpacity(0.3),
+                  child: Row(
+                    children: [
+                      Hero(
+                        tag: character.id.toString(),
+                        child: Image.asset('assets/img/vocations/${character.vocation.image}',
+                          width: 140,
+                          height: 140,
+                        ),
+                      ),
+                      const SizedBox(width: 20),
+                      Expanded(
+                        child: Column(
+                          crossAxisAlignment: CrossAxisAlignment.start,
+                          children: [
+                            StyledHeading(character.vocation.title),
+                            StyledText(character.vocation.description),
+                          ],
+                        ),
+                      )
+                    ],
                   )
-                ],
-              )
+                ),
+                Positioned(
+                  top: 10,
+                  right: 10,
+                  child: Heart(character: character)
+                ),
+              ],
             ),
 
             // weapon and ability and slogan
