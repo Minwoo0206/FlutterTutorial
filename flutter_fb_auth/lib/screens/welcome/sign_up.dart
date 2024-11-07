@@ -1,4 +1,5 @@
 import 'package:flutter/material.dart';
+import 'package:flutter_fb_auth/services/auth_service.dart';
 import 'package:flutter_fb_auth/shared/styled_button.dart';
 import 'package:flutter_fb_auth/shared/styled_text.dart';
 
@@ -11,8 +12,11 @@ class SignUpForm extends StatefulWidget {
 
 class _SignUpFormState extends State<SignUpForm> {
   final GlobalKey<FormState> _formKey = GlobalKey<FormState>();
+
   final TextEditingController _emailController = TextEditingController();
   final TextEditingController _passwordController = TextEditingController();
+
+  String? _errorFeedback;
 
   @override
   Widget build(BuildContext context) {
@@ -59,17 +63,31 @@ class _SignUpFormState extends State<SignUpForm> {
             const SizedBox(height: 16,),
 
             // error feedback
-
+            if (_errorFeedback != null)
+              Text(
+                _errorFeedback!,
+                style: const TextStyle(color: Colors.red),
+              ),
 
             // submit button
             StyledButton(
               onPressed: () async {
                 if (_formKey.currentState!.validate()) {
+                  setState(() {
+                    _errorFeedback = null;
+                  });
+
                   final email = _emailController.text.trim();
                   final password = _passwordController.text.trim();
 
-                  print(email);
-                  print(password);
+                  final user = await AuthService.signUp(email, password);
+
+                  // error feedback
+                  if (user == null) {
+                    setState(() {
+                      _errorFeedback = 'Could not sign up with those details';  
+                    });
+                  }
                 }
               }, 
               child: const StyledButtonText('Sign Up')

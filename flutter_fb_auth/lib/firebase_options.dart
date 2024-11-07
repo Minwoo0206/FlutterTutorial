@@ -51,7 +51,7 @@ class DefaultFirebaseOptions {
 
   static const FirebaseOptions android = FirebaseOptions(
     apiKey: 'AIzaSyCFurtSia_msdnfDwAJnpjWIrpQRDx73wI',
-    appId: '1:542346832157:android:f358aa8cc3c61038aad9f4',
+    appId: '1:542346832157:android:613d5d65a15abd46aad9f4',
     messagingSenderId: '542346832157',
     projectId: 'flutter-masterclass-f126c',
     storageBucket: 'flutter-masterclass-f126c.firebasestorage.app',
@@ -65,4 +65,5 @@ class DefaultFirebaseOptions {
     storageBucket: 'flutter-masterclass-f126c.firebasestorage.app',
     iosBundleId: 'com.example.flutterFbAuth',
   );
+
 }

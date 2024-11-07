@@ -7,6 +7,25 @@
   "client": [
     {
       "client_info": {
+        "mobilesdk_app_id": "1:542346832157:android:613d5d65a15abd46aad9f4",
+        "android_client_info": {
+          "package_name": "com.example.flutter_fb_auth"
+        }
+      },
+      "oauth_client": [],
+      "api_key": [
+        {
+          "current_key": "AIzaSyCFurtSia_msdnfDwAJnpjWIrpQRDx73wI"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": []
+        }
+      }
+    },
+    {
+      "client_info": {
         "mobilesdk_app_id": "1:542346832157:android:f358aa8cc3c61038aad9f4",
         "android_client_info": {
           "package_name": "com.fb_auth.app"
