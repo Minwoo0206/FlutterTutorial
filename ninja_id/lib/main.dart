@@ -1,6 +1,6 @@
 import 'package:flutter/material.dart';
 
-void main() => runApp(MaterialApp(
+void main() => runApp(const MaterialApp(
   home: NinjaCard(),
 ));
 
@@ -20,7 +20,7 @@ class _NinjaCardState extends State<NinjaCard> {
     return Scaffold(
       backgroundColor: Colors.grey[900],
       appBar: AppBar(
-        title: Text(
+        title: const Text(
             'Ninja ID Card',
             style: TextStyle(
               color: Colors.white,
@@ -37,14 +37,14 @@ class _NinjaCardState extends State<NinjaCard> {
           });
         },
         backgroundColor: Colors.grey[800],
-        child: Icon(Icons.add),
+        child: const Icon(Icons.add),
       ),
       body: Padding(
-        padding: EdgeInsets.fromLTRB(30, 40, 30, 0),
+        padding: const EdgeInsets.fromLTRB(30, 40, 30, 0),
         child: Column(
           crossAxisAlignment: CrossAxisAlignment.start,
           children: [
-            Center(
+            const Center(
               child: CircleAvatar(
                 backgroundImage: AssetImage('assets/ninja.jpg'),
                 radius: 40.0,
@@ -54,14 +54,14 @@ class _NinjaCardState extends State<NinjaCard> {
               height: 90.0,
               color: Colors.grey[800],
             ),
-            Text(
+            const Text(
               'NAME',
               style: TextStyle(
                 color: Colors.grey,
                 letterSpacing: 2.0,
               ),
             ),
-            SizedBox(height: 10.0,),
+            const SizedBox(height: 10.0,),
             Text(
               'Chun-Li',
               style: TextStyle(
@@ -71,15 +71,15 @@ class _NinjaCardState extends State<NinjaCard> {
                 fontWeight: FontWeight.bold,
               ),
             ),
-            SizedBox(height: 30.0,),
-            Text(
+            const SizedBox(height: 30.0,),
+            const Text(
               'CURRENT NINJA LEVEL',
               style: TextStyle(
                 color: Colors.grey,
                 letterSpacing: 2.0,
               ),
             ),
-            SizedBox(height: 10.0,),
+            const SizedBox(height: 10.0,),
             Text(
               '$ninLevel',
               style: TextStyle(
@@ -89,14 +89,14 @@ class _NinjaCardState extends State<NinjaCard> {
                 fontWeight: FontWeight.bold,
               ),
             ),
-            SizedBox(height: 30.0,),
+            const SizedBox(height: 30.0,),
             Row(
               children: [
                 Icon(
                   Icons.email,
                   color: Colors.grey[400],
                 ),
-                SizedBox(width: 10.0),
+                const SizedBox(width: 10.0),
                 Text(
                   'chun.li@thenetninja.co.uk',
                   style: TextStyle(
